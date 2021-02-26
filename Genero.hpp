@@ -9,14 +9,14 @@ class Genero
 	private:
 		string nombre;
 	public:
+		vector<string> generos;
 		Genero();
 		Genero(string);
 		~Genero();
 		string getnombre();
 		void setnombre(string);
 		void agregarG(string);
-		vector<string> generos;
-		
+		void ListarG();
 };
 
 #endif

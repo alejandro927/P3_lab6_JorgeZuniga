@@ -24,3 +24,11 @@ void Genero::agregarG(string nombre){
 		}
 	}
 }
+
+void Genero::ListarG() {
+		cout <<"------Generos------"<<endl;
+	for(int i = 0; i < generos.size(); i++) {
+		Genero *c = generos[i];
+		cout << i<<") "<<"Nombre: "<< c->getnombre() <<endl;
+	}
+}

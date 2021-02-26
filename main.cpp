@@ -1,11 +1,15 @@
 #include <iostream>
 #include "Cancion.hpp"
+#include "Genero.hpp"
+#include "Album.hpp"
+#include "PlayList.hpp"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 using namespace std;
 int main(int argc, char** argv) {
-
 	Cancion* can = new Cancion();
-
+	Genero* gen = new Genero();
+	Album* al = new Album();
+	PlayList* play = new PlayList();
 	int opcion=-1;
 	while(opcion!=5) {
 		cout<<"Las opciones son:\n 1)Mantenimiento \n 2)Sobrecarga con el operador * \n 3)Sobrecarga con el operador + \n 4)Sobrecarga con el operador -\n 5)Salida \n Elija su opcion:";
@@ -65,7 +69,7 @@ int main(int argc, char** argv) {
 						break;
 						case 4: {
 							int opc1=0;
-							cout<<"1)listar canciones\n 2)listar generos\n 3) Listar PlayList \n 4) Listar Album \n Elija su opcion:";
+							cout<<"1)listar canciones\n 2)Listar generos\n 3)Listar PlayList \n 4)Listar Album \n Elija su opcion:";
 							cin>>opc1;
 							switch(opc1) {
 								case 1: {
@@ -74,7 +78,7 @@ int main(int argc, char** argv) {
 								}
 								break;
 								case 2: {
-
+									gen->ListarG();
 								}
 								break;
 								case 3: {

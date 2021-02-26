@@ -8,14 +8,14 @@ class Album
 {
 	private:
 		string nombre;
-		vector <Cancion> canciones;
+		vector <Cancion*> canciones;
 	public:
 		Album();
-		Album(string,canciones);
+		Album(string);
 		~Album();
 		string getnombre();
 		void setnombre(string);
-		
+		void ListarA();
 };
 
 #endif

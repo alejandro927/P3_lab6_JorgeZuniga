@@ -25,7 +25,7 @@ class Cancion
 		void setgenero(string);
 		
 		string getduracion();
-		vector<Cancion*> canciones;
+		//vector<Cancion*> canciones;
 		
 		void setduracion(string);
 		void agregarC(string,string,string,string);

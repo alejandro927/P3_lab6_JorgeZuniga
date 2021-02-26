@@ -9,11 +9,11 @@ class PlayList
 		
 	public:
 		PlayList();
-		PlayList(string,canciones);
+		PlayList(string);
 		~PlayList();
 		string getnombre();
 		void setnombre(string);
-		
+		void ListarP();
 };
 
 #endif
