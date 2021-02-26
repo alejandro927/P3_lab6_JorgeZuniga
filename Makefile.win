@@ -1,0 +1,40 @@
+# Project: P3_Lab6_JorgeZuniga
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o Genero.o Cancion.o Album.o PlayList.o
+LINKOBJ  = main.o Genero.o Cancion.o Album.o PlayList.o
+LIBS     = -L"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/lib" -L"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/include" -I"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/include" -I"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/Alejandro/Desktop/c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = P3_Lab6_JorgeZuniga.exe
+CXXFLAGS = $(CXXINCS) -std=c++11 -g3
+CFLAGS   = $(INCS) -std=c++11 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Genero.o: Genero.cpp
+	$(CPP) -c Genero.cpp -o Genero.o $(CXXFLAGS)
+
+Cancion.o: Cancion.cpp
+	$(CPP) -c Cancion.cpp -o Cancion.o $(CXXFLAGS)
+
+Album.o: Album.cpp
+	$(CPP) -c Album.cpp -o Album.o $(CXXFLAGS)
+
+PlayList.o: PlayList.cpp
+	$(CPP) -c PlayList.cpp -o PlayList.o $(CXXFLAGS)
